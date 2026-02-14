@@ -37,31 +37,33 @@ export function AdSlider({ slides }: AdSliderProps) {
       className="relative w-full overflow-hidden rounded-sm"
       aria-label="Advertisement slider"
     >
-      <div className="relative h-full w-full bg-white p-4 pb-10">
-        <Image
-          src={slide.imageSrc}
-          alt={slide.imageAlt}
-          width={1264}
-          height={336}
-          className="object-cover"
-          priority={activeIndex === 0}
-        />
-
-        <div className="absolute bottom-16 right-8">
-          <button
-            type="button"
-            className={`hover-lift inline-flex items-center gap-2.5 rounded px-5 py-2.5 text-lg font-extrabold uppercase leading-none tracking-[-0.02em] text-primary transition hover:opacity-90 active:scale-[0.98] ${mulish.className}`}
-            style={{ backgroundColor: slide.ctaBgColor }}
-          >
-            <span>{slide.ctaLabel}</span>
-            <Image
-              src="/icons/arrow-right.svg"
-              alt=""
-              width={14}
-              height={14}
-              aria-hidden
-            />
-          </button>
+      <div className="relative w-full bg-white p-4 pb-12">
+        <div className="relative w-full overflow-hidden rounded-sm" style={{ aspectRatio: "1264/336" }}>
+          <Image
+            src={slide.imageSrc}
+            alt={slide.imageAlt}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 1264px"
+            priority={activeIndex === 0}
+          />
+          <div className="absolute bottom-1 right-2 sm:bottom-6 sm:right-6">
+            <button
+              type="button"
+              className={`hover-lift inline-flex max-w-[calc(100vw-3rem)] items-center gap-1 rounded px-2.5 py-1.5 text-[8px] font-extrabold uppercase leading-tight tracking-[-0.02em] text-primary transition hover:opacity-90 active:scale-[0.98] sm:max-w-none sm:gap-2.5 sm:px-5 sm:py-2.5 sm:text-base md:text-lg ${mulish.className}`}
+              style={{ backgroundColor: slide.ctaBgColor }}
+            >
+              <span className="min-w-0 truncate">{slide.ctaLabel}</span>
+              <Image
+                src="/icons/arrow-right.svg"
+                alt=""
+                width={14}
+                height={14}
+                className="h-3 w-3 shrink-0 sm:h-[14px] sm:w-[14px]"
+                aria-hidden
+              />
+            </button>
+          </div>
         </div>
       </div>
 
