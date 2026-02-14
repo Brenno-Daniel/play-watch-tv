@@ -37,13 +37,7 @@ Plataforma de shows e festivais ao vivo — assista transmissões, line-ups e co
    npm install
    ```
 
-3. **(Opcional)** Coloque o favicon em:
-
-   ```
-   public/images/fav-icon.png   (24×24 px)
-   ```
-
-4. Rode o ambiente de desenvolvimento:
+3. Rode o ambiente de desenvolvimento:
 
    ```bash
    npm run dev
@@ -70,17 +64,8 @@ Plataforma de shows e festivais ao vivo — assista transmissões, line-ups e co
 - **`src/app/(web)/home/home-data.ts`** — Dados e tipos da home
 - **`src/components/`** — Componentes reutilizáveis (cards, seções, UI, layout)
 - **`public/images/`** — Imagens (favicon, in-live, artists, etc.)
-- **`docs/ARCHITECTURE.md`** — Arquitetura, escolha de libs e design system
 
----
-
-## 🎨 Design e requisitos
-
-- Favicon em `public/images/fav-icon.png` (24×24)
-- Slider de anúncios com transição automática a cada 5 segundos
-- Efeito hover em botões e cards: `translateY(-5px)` com transição suave
-- Carrosséis: In Live, Exclusive Content (com card Nike custom), Watch Again
-- Componentes reutilizáveis e design system documentados em `docs/ARCHITECTURE.md`
+Para arquitetura do projeto, escolha de bibliotecas, componentes reutilizáveis e design system, veja **[Arquitetura](docs/ARCHITECTURE.md)**.
 
 ---
 
